@@ -33,6 +33,9 @@ mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
 cp -R $INPUT_SOURCE_FILE "$CLONE_DIR/$INPUT_DESTINATION_FOLDER"
 cd "$CLONE_DIR"
 
+echo "git status"
+git status
+
 if [ -z "$INPUT_COMMIT_MESSAGE"]
 then
   INPUT_COMMIT_MESSAGE="Update from https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}"
